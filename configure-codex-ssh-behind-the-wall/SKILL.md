@@ -1,6 +1,6 @@
 ---
 name: configure-codex-ssh-behind-the-wall
-description: Configure SSH access from Codex or a student's local computer to an intranet server for course or lab use, especially behind restricted networks or proxy environments. Use when each student needs to fill a setup checklist with user_name, server HostName, SSH Port, VPN or jump host requirements, their own SSH key, Host alias codex-user_name, server User user_name, optional Codex auth.json copy, SSH remote port forwarding through the student's local proxy, and server-side Codex CLI verification.
+description: Configure SSH access from Codex to a ssh server for course or lab use, especially behind the Wall or proxy environments. Use when each user needs to fill a setup checklist with user_name, server HostName, SSH Port, VPN or jump host requirements, their own SSH key, Host alias codex-user_name, server User user_name, optional Codex auth.json copy, SSH remote port forwarding through the student's local proxy, and server-side Codex CLI verification.
 ---
 
 # configure codex ssh behind the Wall
