@@ -1,6 +1,6 @@
 # Skills
 
-首先先配置好 Codex CLI；常见方法包括官网直接安装、Homebrew、npm、服务器 module。
+First, set up Codex CLI. Common installation options include the official installer or documentation, Homebrew, npm, and server-side modules.
 
 ## Install Codex CLI
 
