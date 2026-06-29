@@ -1,12 +1,41 @@
 # Skills
 
-Some useful vibe-coded skills.
+首先先配置好 Codex CLI；常见方法包括官网直接安装、Homebrew、npm、服务器 module。
+
+## Install Codex CLI
+
+Choose the method that matches your environment:
+
+- Official installer or documentation: follow the current Codex CLI installation instructions from OpenAI for your operating system.
+- Homebrew: install through the Homebrew formula or tap available for your environment, then verify with `codex --version`.
+- npm: install the CLI package with npm, then verify with `codex --version`.
+- module: on shared servers or clusters, run `module avail`, then `module load codex`, then `codex --version`.
+
+Example check:
+
+```bash
+codex --version
+```
+
+For module-based environments:
+
+```bash
+module avail
+module load codex
+codex --version
+```
 
 ## Available Skills
 
-### configure-intranet-codex-ssh
+### configure codex ssh behind the Wall
 
-Configure SSH access from a student's local computer to an intranet server for Codex CLI use.
+Configure SSH access from a student's local computer to an intranet server for Codex CLI use, including optional proxy forwarding when the server needs to reach the internet through the student's local proxy.
+
+Skill folder:
+
+```text
+configure-codex-ssh-behind-the-wall
+```
 
 This skill helps with:
 
@@ -24,7 +53,7 @@ Copy the skill folder into your Codex skills directory:
 
 ```bash
 mkdir -p ~/.codex/skills
-cp -R configure-intranet-codex-ssh ~/.codex/skills/
+cp -R configure-codex-ssh-behind-the-wall ~/.codex/skills/
 ```
 
 Then restart Codex or start a new Codex session so the skill can be discovered.
@@ -34,7 +63,7 @@ Then restart Codex or start a new Codex session so the skill can be discovered.
 Ask Codex to use the skill:
 
 ```text
-Use the configure-intranet-codex-ssh skill to help me set up Codex SSH access to my intranet server.
+Use the configure-codex-ssh-behind-the-wall skill to help me set up Codex SSH access to my intranet server.
 ```
 
 The skill starts by asking for this checklist:
@@ -68,25 +97,25 @@ codex-alice
 After installing the skill, helper scripts are available under:
 
 ```text
-~/.codex/skills/configure-intranet-codex-ssh/scripts/
+~/.codex/skills/configure-codex-ssh-behind-the-wall/scripts/
 ```
 
 Verify SSH:
 
 ```bash
-bash ~/.codex/skills/configure-intranet-codex-ssh/scripts/verify_ssh.sh codex-user_name
+bash ~/.codex/skills/configure-codex-ssh-behind-the-wall/scripts/verify_ssh.sh codex-user_name
 ```
 
 Start reverse proxy forwarding:
 
 ```bash
-bash ~/.codex/skills/configure-intranet-codex-ssh/scripts/start_reverse_proxy.sh codex-user_name 7897
+bash ~/.codex/skills/configure-codex-ssh-behind-the-wall/scripts/start_reverse_proxy.sh codex-user_name 7897
 ```
 
 Verify server-side Codex CLI:
 
 ```bash
-bash ~/.codex/skills/configure-intranet-codex-ssh/scripts/verify_server_codex.sh codex-user_name
+bash ~/.codex/skills/configure-codex-ssh-behind-the-wall/scripts/verify_server_codex.sh codex-user_name
 ```
 
 ## Safety Notes
