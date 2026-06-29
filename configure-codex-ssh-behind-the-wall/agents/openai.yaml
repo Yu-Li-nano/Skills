@@ -1,4 +1,4 @@
 interface:
   display_name: "configure codex ssh behind the Wall"
-  short_description: "Set up Codex SSH access behind restricted networks or local proxies."
+  short_description: "Set up Codex SSH access behind the Wall or local proxies."
   default_prompt: "Help me configure Codex SSH access behind the Wall."
