@@ -1,0 +1,4 @@
+interface:
+  display_name: "Configure Intranet Codex SSH"
+  short_description: "Set up SSH access from Codex to an intranet server."
+  default_prompt: "Help me configure Codex SSH access to the intranet server."
